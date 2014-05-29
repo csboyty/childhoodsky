@@ -3,9 +3,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="fragment" content="!">
-    <meta name="description" content="通道独特的自然生态环境与丰富的非物质文化遗产展示平台" />
-    <meta name="keywords" content="社会创新, 新通道, 文化产品创新, 文化产品设计，通道，侗锦" />
-    <title><?php wp_title( '|', true, 'right' ); ?></title>
+    <meta name="description" content="童年的天空" />
+    <meta name="keywords" content="童年" />
+    <title>童年的天空</title>
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/frontend/src/index.css"/>
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/frontend/libs/modernizr.js"></script>
     <script type="text/javascript">
