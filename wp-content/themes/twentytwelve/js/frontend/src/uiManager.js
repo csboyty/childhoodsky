@@ -35,6 +35,14 @@ ZY.uiManager=(function(){
         scrollToTarget:function(target){
             var top=target.offset().top;
 
+            if(!$("#zy_nav").hasClass("zy_nav_active")){
+                top=top-80;
+            }
+
+            if(target.is($("#zy_section_one"))){
+                top=top-100;
+            }
+            
             if(top!= undefined){
                 TweenLite.killTweensOf(window);
 
@@ -127,6 +135,10 @@ ZY.uiManager=(function(){
             var tpl= $("#zy_section_one_articles_tpl").html();
             var html = juicer(tpl,{posts:posts});
             $("#zy_section_one_list").append($(html));
+
+            $("#zy_section_one_list .zy_article_abstract p").ellipsis({
+                row: 8
+            });
         },
 
         /**

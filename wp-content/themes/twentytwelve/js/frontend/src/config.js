@@ -8,19 +8,19 @@
 var ZY=ZY||{};
 
 ZY.config={
-    ajaxurl:"http://www.comdesignlab.com/travel/wp-admin/admin-ajax.php",
-    siteurl:"http://localhost/childhoodsky",
+    ajaxurl:"http://www.comdesignlab.com/childhoodsky/wp-admin/admin-ajax.php",
+    siteurl:"http://www.comdesignlab.com/childhoodsky",
     categoryIds:{
-        sectionOneId:14, //童年的天空
-        sectionTwoId:15,  //艺术小作坊
-        sectionThreeId:16, //绘本欣赏
-        sectionFourId:17 //蓬蓬头杂货铺
+        sectionOneId:1, //童年的天空
+        sectionTwoId:2,  //艺术小作坊
+        sectionThreeId:3, //绘本欣赏
+        sectionFourId:5 //蓬蓬头杂货铺
     },
     articleWidths:{
         sectionOneWidth:280,//每个分类的li的宽度
         sectionTwoWidth:370,
         sectionThreeWidth:370,
-        sectionFourWidth:270
+        sectionFourWidth:370
     },
     errorCode:{
         connectionError:"无法连接到服务器。", //错误提示信息

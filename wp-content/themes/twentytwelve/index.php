@@ -30,6 +30,7 @@
                     "<?php echo get_template_directory_uri(); ?>/js/frontend/libs/juicer-min.js",
                     "<?php echo get_template_directory_uri(); ?>/js/frontend/libs/greensock/TweenMax.min.js",
                     "<?php echo get_template_directory_uri(); ?>/js/frontend/libs/greensock/ScrollToPlugin.min.js",
+                    "<?php echo get_template_directory_uri(); ?>/js/frontend/libs/jquery.ellipsis.js",
                     "<?php echo get_template_directory_uri(); ?>/js/frontend/src/config.js",
                     "<?php echo get_template_directory_uri(); ?>/js/frontend/src/controllerManager.js",
                     "<?php echo get_template_directory_uri(); ?>/js/frontend/src/dataManager.js",
@@ -73,13 +74,11 @@
 
 <!--------------------------------------童年的天空------------------------------------------>
 <section id="zy_section_one" class="zy_section_one zy_section">
-    <p class="zy_section_description">
-        童年的天空是一个致力发展中国原创图画书的网站
-        童年的天空工作室是湖南大学设计艺术学院的师生共同努力的结果他们满怀热情与梦想，这是一支致力于中国原创图画书发展的团队。
-        我们坚持“Art for tomorrow”，这同样也是童年的天空团队的理想
-        什么样的艺术是我们的孩子们需要的艺术？什么样的教育是好的教育？
-        童年的天空图画书工作室的每一本图画书里，都有我们对这个问题的理解。
-    </p>
+    <div class="zy_section_description">
+        童年的天空是一个致力于发展中国原创图画书的工作室，这支团队的主要成员是湖南大学设计艺术学院的师生，
+        “Art for tomorrow”是童年的天空团队的理想。
+        什么样的艺术是孩子们需要的艺术？什么样的教育是好的教育？童年的天空图画书工作室的每一本作品里，都有他们对这个问题的理解。
+    </div>
     <h2 class="zy_subheading">特约专栏</h2>
     <section id="zy_section_one_contain" class="zy_section_contain">
         <a id="zy_section_one_prev" class="zy_page_prev zy_page_item zy_disable"></a>
@@ -122,13 +121,18 @@
     <h2 class="zy_section_heading">艺术小作坊</h2>
 
     <section id="zy_section_two_contain" class="zy_section_contain">
-        <p class="zy_section_description">
-            童年的天空是一个致力发展中国原创图画书的网站
-            童年的天空工作室是湖南大学设计艺术学院的师生共同努力的结果他们满怀热情与梦想，这是一支致力于中国原创图画书发展的团队。
-            我们坚持“Art for tomorrow”，这同样也是童年的天空团队的理想
-            什么样的艺术是我们的孩子们需要的艺术？什么样的教育是好的教育？
-            童年的天空图画书工作室的每一本图画书里，都有我们对这个问题的理解。
-        </p>
+        <div class="zy_section_description">
+            <p>
+                这个栏目是将我们有限的艺术创作、艺术教育经验做了初步的梳理，分享给广大的教育工作者和年轻的父母亲。
+            </p>
+            <p>
+                我们的课堂目前有一部分都基于大学教育实践，比如剪纸和陶艺，所展示的作品就是大孩子们童心大发时创作的部分作品。
+            </p>
+            <p>
+                大学教育经验，有一部分加以改造，是可以应用于儿童美术教育的。一部分来源于儿童公益美术教育实践。
+                我们将陆续推出一些简易、趣味性强的艺术课堂，并不断加以完善，欢迎大家多提宝贵意见。
+            </p>
+        </div>
         <a id="zy_section_two_prev" class="zy_page_prev zy_page_item zy_disable">上一页</a>
         <div id="zy_section_two_list_container" class="zy_post_list_container">
             <script id="zy_section_two_articles_tpl" type="text/template">
@@ -166,13 +170,17 @@
     <h2 class="zy_section_heading">绘本赏析</h2>
 
     <section id="zy_section_three_contain" class="zy_section_contain">
-        <p class="zy_section_description">
-            童年的天空是一个致力发展中国原创图画书的网站
-            童年的天空工作室是湖南大学设计艺术学院的师生共同努力的结果他们满怀热情与梦想，这是一支致力于中国原创图画书发展的团队。
-            我们坚持“Art for tomorrow”，这同样也是童年的天空团队的理想
-            什么样的艺术是我们的孩子们需要的艺术？什么样的教育是好的教育？
-            童年的天空图画书工作室的每一本图画书里，都有我们对这个问题的理解。
-        </p>
+        <div class="zy_section_description">
+            <p>
+                绘本赏析栏目征得作家、画家、出版社的同意，并在图书发表一年以后，以插图版的形式发表，转载图书不超过30%的插图、文字内容配合插图版形式重新改编。
+            </p>
+            <p>
+                我们目前所征集的图书，大多来自于童年的天空创作团队的艺术家们。他们有的在儿童读物出版领域奉献一生的老前辈，有的是初出茅庐满怀热情的新锐。 图画书看起来简单，但读起来，怎么和孩子读，却大有学问。
+            </p>
+            <p>
+                本栏目主要面向家长、幼儿园老师，向大家推荐优秀的绘本读物，希望与爱图画书爱家人爱生活的你我他共同分享图画书阅读的乐趣。
+            </p>
+        </div>
         <a id="zy_section_three_prev" class="zy_page_prev zy_page_item zy_disable">上一页</a>
         <div id="zy_section_three_list_container" class="zy_post_list_container">
             <script id="zy_section_three_articles_tpl" type="text/template">
@@ -214,19 +222,26 @@
 	<h2 class="zy_section_heading">蓬蓬头杂货铺</h2>
 
     <section id="zy_section_four_contain" class="zy_section_contain">
-        <p class="zy_section_description">
-            童年的天空是一个致力发展中国原创图画书的网站
-            童年的天空工作室是湖南大学设计艺术学院的师生共同努力的结果他们满怀热情与梦想，这是一支致力于中国原创图画书发展的团队。
-            我们坚持“Art for tomorrow”，这同样也是童年的天空团队的理想
-            什么样的艺术是我们的孩子们需要的艺术？什么样的教育是好的教育？
-            童年的天空图画书工作室的每一本图画书里，都有我们对这个问题的理解。
-        </p>
+        <div class="zy_section_description">
+            <p>
+                为中国的孩子创作优秀的本土绘本，不买盗版书，是你对我们的支持。
+            </p>
+            <p>
+                童年的天空网站上所有义卖的物品首先是为了支持本土图画书原创。目前我们做不到图画书的电子版完全免费，
+                但我们希望2015年开全免费的e绘本栏目,以电子期刊的形式发表在童年的天空的网站上。
+                而经典文学栏目则以插图＋经典文学作品的方式在童年的天空网站上发表，免费提供给所有的孩子阅读，
+                我们的网站也会更加深入建设的更好，给更多的孩子提供更多原创。
+            </p>
+            <p>
+                如果您喜欢我们的网站，信任我们的团队，请您支持我们网站上蓬蓬头杂货铺的义卖。
+            </p>
+        </div>
         <a id="zy_section_four_prev" class="zy_page_prev zy_page_item zy_disable">上一页</a>
         <div id="zy_section_four_list_container" class="zy_post_list_container">
             <script id="zy_section_four_articles_tpl" type="text/template">
 
                 {@each posts as post}
-                <li data-zy-post-id="${post.post_id}" data-zy-post-type="${post.post_mime_type}" class="zy_article_four">
+                <li data-zy-post-id="${post.post_id}" data-zy-post-type="${post.post_mime_type}" class="zy_article_two">
                     <div class="zy_article_thumb"><img src="${post.thumb}"/></div>
                     <div class="zy_article_abstract">
                         <h2>${post.post_title}</h2>
@@ -257,38 +272,40 @@
             <div class="zy_project_column">
                 <ul class="cooperatorList">
                     <h4 class="title">艺术家</h4>
-                    <li>徐冰&nbsp;中央美术学院院长</li>
-                    <li>吕胜中&nbsp;中央美术学院实验艺术学院院长</li>
-                    <li>蔡皋&nbsp;CCBY理事</li>
-                    <li>萧沛苍&nbsp;原湖南省美协副主席，湖南油画院院长</li>
-                    <li>颜新元&nbsp;北京航空航天大学新媒体学院教授</li>
-                    <li>郏宝雄&nbsp;湖南美术出版社原副社长</li>
+                    <li>徐&nbsp;&nbsp;&nbsp;冰&nbsp;&nbsp;&nbsp;中央美术学院院长</li>
+                    <li>吕胜中&nbsp;&nbsp;&nbsp;中央美术学院实验艺术学院院长</li>
+                    <li>蔡&nbsp;&nbsp;&nbsp;皋&nbsp;&nbsp;&nbsp;CCBY理事</li>
+                    <li>萧沛苍&nbsp;&nbsp;&nbsp;原湖南省美协副主席，湖南油画院院长</li>
+                    <li>颜新元&nbsp;&nbsp;&nbsp;北京航空航天大学新媒体学院教授</li>
+                    <li>郏宝雄&nbsp;&nbsp;&nbsp;湖南美术出版社原副社长</li>
                 </ul>
                 <ul class="cooperatorList">
                     <h4 class="title">教育家</h4>
-                    <li>伊少淳&nbsp;首都师范大学教授，中国少年儿童艺术教育委员会主席</li>
-                    <li>谢丽芳&nbsp;中国少年儿童艺术教育委员会副主席</li>
-                    <li>何人可&nbsp;湖南大学设计艺术学院院长</li>
-                    <li>赵江洪&nbsp;湖南大学设计艺术学院教授</li>
-                    <li>萧狄虎&nbsp;湖南大学设计艺术学院教授</li>
-                    <li>季铁&nbsp;湖南大学设计艺术学院副院长</li>
-                    <li>袁翔&nbsp;南大学设计艺术学院教学主任</li>
-                    <li>谭浩&nbsp;湖南大学设计艺术学院副教授</li>
-                    <li>谢军&nbsp;湖南大学设计艺术学院副教授</li>
+                    <li>伊少淳&nbsp;&nbsp;&nbsp;中国少年儿童艺术教育委员会主席</li>
+                    <li>谢丽芳&nbsp;&nbsp;&nbsp;中国少年儿童艺术教育委员会副主席</li>
+                    <li>何人可&nbsp;&nbsp;&nbsp;湖南大学设计艺术学院院长</li>
+                    <li>赵江洪&nbsp;&nbsp;&nbsp;湖南大学设计艺术学院教授</li>
+                    <li>萧狄虎&nbsp;&nbsp;&nbsp;湖南大学设计艺术学院教授</li>
+                    <li>季&nbsp;&nbsp;&nbsp;铁&nbsp;&nbsp;&nbsp;湖南大学设计艺术学院副院长</li>
+                    <li>袁&nbsp;&nbsp;&nbsp;翔&nbsp;&nbsp;&nbsp;南大学设计艺术学院教学主任</li>
+                    <li>谭&nbsp;&nbsp;&nbsp;浩&nbsp;&nbsp;&nbsp;湖南大学设计艺术学院副教授</li>
+                    <li>谢&nbsp;&nbsp;&nbsp;军&nbsp;&nbsp;&nbsp;湖南大学设计艺术学院副教授</li>
+                    <li>朱顺德 &nbsp;&nbsp;&nbsp;湖南省美术家协会主席</li>
                 </ul>
                 <ul class="cooperatorList">
                     <h4 class="title">出版人</h4>
-                    <li>张天明&nbsp;湖南新闻出版集团总经理</li>
-                    <li>周敏纳&nbsp;湖南美术出版社原副社长</li>
-                    <li>左汉中</li>
-                    <li>李小山&nbsp;湖南美术出版社社长</li>
-                    <li>黄啸&nbsp;湖南美术出版社副社长</li>
-                    <li>李松&nbsp;圣之空间馆长</li>
-                    <li>黎丹&nbsp;湖南美术出版社编辑</li>
-                    <li>萧睿子&nbsp;湖南教育出版社主任编辑</li>
-                    <li>袁江&nbsp;编辑室主任</li>
-                    <li>谭菁菁&nbsp;湖南少年儿童出版社</li>
-
+                    <li>张天明&nbsp;&nbsp;&nbsp;湖南新闻出版集团总经理</li>
+                    <li>郏宝雄&nbsp;&nbsp;&nbsp;湖南美术出版社原副社长</li>
+                    <li>周敏纳&nbsp;&nbsp;&nbsp;湖南美术出版社原副社长</li>
+                    <li>左汉中&nbsp;&nbsp;&nbsp;湖南美术出版社编审</li>
+                    <li>李小山&nbsp;&nbsp;&nbsp;湖南美术出版社社长</li>
+                    <li>黄&nbsp;&nbsp;&nbsp;啸&nbsp;&nbsp;&nbsp;湖南美术出版社副社长</li>
+                    <li>李&nbsp;&nbsp;&nbsp;松&nbsp;&nbsp;&nbsp;圣之空间馆长</li>
+                    <li>黎&nbsp;&nbsp;&nbsp;丹&nbsp;&nbsp;&nbsp;湖南美术出版社编辑</li>
+                    <li>萧睿子&nbsp;&nbsp;&nbsp;湖南教育出版社主任编辑</li>
+                    <li>袁&nbsp;&nbsp;&nbsp;江&nbsp;&nbsp;&nbsp;编辑室主任</li>
+                    <li>谭菁菁&nbsp;&nbsp;&nbsp;湖南少年儿童出版社</li>
+                    <li>陈荣意&nbsp;&nbsp;&nbsp;教师</li>
                 </ul>
                 <ul class="cooperatorList">
                     <h4 class="title">支持单位</h4>
@@ -302,39 +319,39 @@
             <div class="zy_project_column">
                 <ul class="cooperatorList">
                     <h4 class="title">顾问</h4>
-                    <li>野津珖子&nbsp;日籍退休教师，童年的天空荣誉顾问</li>
-                    <li>南岛顺子&nbsp;日籍退休编辑，童年的天空荣誉顾问</li>
+                    <li>野津珖子&nbsp;&nbsp;&nbsp;日籍退休教师，童年的天空荣誉顾问</li>
+                    <li>南岛顺子&nbsp;&nbsp;&nbsp;日籍退休编辑，童年的天空荣誉顾问</li>
                 </ul>
 
                 <ul class="cooperatorList">
                     <h4 class="title">作家</h4>
-                    <li>曹文轩</li>
-                    <li>梅子涵&nbsp;上海师范大学教授</li>
-                    <li>彭懿</li>
-                    <li>骆小戈&nbsp;中国妇女研究学会理事</li>
-                    <li>薛忆沩</li>
-                    <li>陈约红</li>
+                    <li>曹文轩&nbsp;&nbsp;&nbsp;北京作家协会副主席，儿童文学委员会委员</li>
+                    <li>梅子涵&nbsp;&nbsp;&nbsp;上海师范大学教授</li>
+                    <li>彭&nbsp;&nbsp;&nbsp;懿&nbsp;&nbsp;&nbsp;上海少年儿童出版社编辑  </li>
+                    <li>骆小戈&nbsp;&nbsp;&nbsp;中国妇女研究学会理事</li>
+                    <li>薛忆沩&nbsp;&nbsp;&nbsp;曾为《南方周末》及《随笔》杂志撰写读书专栏</li>
+                    <li>陈约红&nbsp;&nbsp;&nbsp;《滇池》文学月刊总编室主任，副编审</li>
                 </ul>
 
                 <ul class="cooperatorList">
                     <h4 class="title">青年艺术家、作家</h4>
-                    <li>杨忠&nbsp;中央美术学院城市设计艺术学院副教授</li>
-                    <li>庄庄&nbsp;北京航空航天学院</li>
-                    <li>萧翱子&nbsp;湖南大学设计艺术学院副教授</li>
-                    <li>张月</li>
-                    <li>弯弯</li>
-                    <li>孙亚楠&nbsp;童年的天空图画书工作室助理编辑</li>
-                    <li>王擎&nbsp;童年的天空网站工作室助理设计师</li>
-                    <li>杨丽村&nbsp;艺术家／设计师</li>
-                    <li>王天天&nbsp;艺术家／设计师</li>
-                    <li>周绪敏&nbsp;艺术家／教师</li>
-                    <li>刘天&nbsp;艺术家／设计师</li>
-                    <li>王林&nbsp;艺术家／设计师</li>
-                    <li>姚瑶&nbsp;艺术家／设计师</li>
-                    <li>方堃&nbsp;艺术家／设计师</li>
-                    <li>郑吴越&nbsp;艺术家／教师</li>
-                    <li>张源源&nbsp;艺术家／设计师</li>
-                    <li>杨昊&nbsp;艺术家／设计师</li>
+                    <li>杨&nbsp;&nbsp;&nbsp;忠&nbsp;&nbsp;&nbsp;中央美术学院城市设计艺术学院副教授</li>
+                    <li>庄&nbsp;&nbsp;&nbsp;庄&nbsp;&nbsp;&nbsp;北京航空航天学院</li>
+                    <li>萧翱子&nbsp;&nbsp;&nbsp;湖南大学设计艺术学院副教授</li>
+                    <li>弯&nbsp;&nbsp;&nbsp;弯&nbsp;&nbsp;&nbsp;艺术家／设计师</li>
+                    <li>张&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;艺术家／设计师</li>
+                    <li>孙亚楠&nbsp;&nbsp;&nbsp;童年的天空图画书工作室助理编辑</li>
+                    <li>王&nbsp;&nbsp;&nbsp;擎&nbsp;&nbsp;&nbsp;童年的天空网站工作室助理设计师</li>
+                    <li>杨丽村&nbsp;&nbsp;&nbsp;艺术家／设计师</li>
+                    <li>王天天&nbsp;&nbsp;&nbsp;艺术家／设计师</li>
+                    <li>周绪敏&nbsp;&nbsp;&nbsp;艺术家／教师</li>
+                    <li>刘&nbsp;&nbsp;&nbsp;天&nbsp;&nbsp;&nbsp;艺术家／设计师</li>
+                    <li>王&nbsp;&nbsp;&nbsp;林&nbsp;&nbsp;&nbsp;艺术家／设计师</li>
+                    <li>姚&nbsp;&nbsp;&nbsp;瑶&nbsp;&nbsp;&nbsp;艺术家／设计师</li>
+                    <li>方&nbsp;&nbsp;&nbsp;堃&nbsp;&nbsp;&nbsp;艺术家／设计师</li>
+                    <li>郑吴越&nbsp;&nbsp;&nbsp;艺术家／教师</li>
+                    <li>张源源&nbsp;&nbsp;&nbsp;艺术家／设计师</li>
+                    <li>杨&nbsp;&nbsp;&nbsp;昊&nbsp;&nbsp;&nbsp;艺术家／设计师</li>
                 </ul>
             </div>
 

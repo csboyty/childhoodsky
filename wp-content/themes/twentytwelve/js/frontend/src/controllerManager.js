@@ -9,18 +9,21 @@ var ZY=ZY||{};
 ZY.controllerManager=(function(){
 
     var rect="";//clip的rect值
+    var topH=$("#zy_top_post").height();
+
     var sectionOneBG=$("#zy_section_one_bg .zy_theme_bg_content");
     var sectionTwoBG=$("#zy_section_two_bg .zy_theme_bg_content");
     var sectionThreeBG=$("#zy_section_three_bg .zy_theme_bg_content");
     var sectionFourBG=$("#zy_section_four_bg .zy_theme_bg_content");
 
 
+    var menu=$("#zy_nav");
 
-    var sectionOneY=$("#zy_section_one").offset().top;
-    var sectionTwoY=$("#zy_section_two").offset().top;
-    var sectionThreeY=$("#zy_section_three").offset().top;
-    var sectionFourY=$("#zy_section_four").offset().top;
-    var footerY=$(".zy_footer").offset().top;
+    var sectionOneY=$("#zy_section_one").offset().top-80;
+    var sectionTwoY=$("#zy_section_two").offset().top-80;
+    var sectionThreeY=$("#zy_section_three").offset().top-80;
+    var sectionFourY=$("#zy_section_four").offset().top-80;
+    var footerY=$(".zy_footer").offset().top-80;
 
     /**
      * 设置页面的最大个数
@@ -29,7 +32,7 @@ ZY.controllerManager=(function(){
      * @returns {*}
      */
     function setMaxLimit(categoryId,limit){
-        if(categoryId==ZY.config.categoryIds.sectionOneId||categoryId==ZY.config.categoryIds.sectionFourId){
+        if(categoryId==ZY.config.categoryIds.sectionOneId){
             if(limit>4){
                 limit=4;
             }
@@ -275,10 +278,10 @@ ZY.controllerManager=(function(){
                 //兼容ie
                 if(evt.preventDefault){
                     evt.preventDefault();
-                    //evt.stopPropagation(); //如果调用了setWheelScrollSpeed，需要阻止冒泡到window
+                    evt.stopPropagation(); //如果调用了setWheelScrollSpeed，需要阻止冒泡到window
                 }else{
                     evt.returnValue=false;
-                    //evt.cancelBubble = false;
+                    evt.cancelBubble = false;
                 }
             };
             target.addEventListener(mousewheelEvt, mousewheelHandler);
@@ -320,6 +323,17 @@ ZY.controllerManager=(function(){
             var winH=$(window).height();
             var winW=$(window).width();
 
+            //菜单操作
+            if(sy>=topH){
+                if(!menu.hasClass("zy_nav_active")){
+                    menu.addClass("zy_nav_active");
+                }
+            }else{
+                if(menu.hasClass("zy_nav_active")){
+                    menu.removeClass("zy_nav_active");
+                }
+            }
+
             //设置顶部菜单状态, 首先重置所有菜单,计算时要减去nav的80高
             $("#zy_nav ul li a").removeClass("active");
             if(sy<=sectionOneY){
@@ -347,12 +361,12 @@ ZY.controllerManager=(function(){
              *注意：背景图的高度是根据宽度变化的，可能会大于720，最大为一屏幕高，
              *720-（sy-sectionOney)+100 可能大于一屏幕高，并不影响显示，因为当clip的显示高度大于实际高度时，只会显示成实际高度
              */
-            if(sy>sectionOneY-winH && sy<=sectionOneY+800){
+            if(sy>sectionOneY-winH && sy<=sectionOneY+720){
                 if(!ZY.config.deviceCode.iOS){
                     sectionOneBG.addClass("zy_bg_fixed");
 
                     //滚动的时候使用clip
-                    rect="rect(0px "+winW+"px "+(800-(sy-sectionOneY)+100)+"px 0px)";
+                    rect="rect(0px "+winW+"px "+(720-(sy-sectionOneY)+100)+"px 0px)";
                     sectionOneBG.css("clip",rect);
                 }
 
@@ -375,12 +389,12 @@ ZY.controllerManager=(function(){
                 }
             }
 
-            if(sy>sectionTwoY-winH && sy<=sectionTwoY+800){
+            if(sy>sectionTwoY-winH && sy<=sectionTwoY+720){
                 if(!ZY.config.deviceCode.iOS){
                     sectionTwoBG.addClass("zy_bg_fixed");
 
                     //滚动的时候使用clip
-                    rect="rect(0px "+winW+"px "+(800-(sy-sectionTwoY)+100)+"px 0px)";
+                    rect="rect(0px "+winW+"px "+(720-(sy-sectionTwoY)+100)+"px 0px)";
                     sectionTwoBG.css("clip",rect);
                 }
 
@@ -403,12 +417,12 @@ ZY.controllerManager=(function(){
                 }
             }
 
-            if(sy>sectionThreeY-winH && sy<=sectionThreeY+800){
+            if(sy>sectionThreeY-winH && sy<=sectionThreeY+720){
                 if(!ZY.config.deviceCode.iOS){
                     sectionThreeBG.addClass("zy_bg_fixed");
 
                     //向下滚动的时候使用clip
-                    rect="rect(0px "+winW+"px "+(800-(sy-sectionThreeY)+100)+"px 0px)";
+                    rect="rect(0px "+winW+"px "+(720-(sy-sectionThreeY)+100)+"px 0px)";
                     sectionThreeBG.css("clip",rect);
                 }
                 if(!ZY.dataManager.sectionThreeLoaded){
@@ -432,12 +446,12 @@ ZY.controllerManager=(function(){
                 }
 
             }
-            if(sy>sectionFourY-winH && sy<=sectionFourY+800){
+            if(sy>sectionFourY-winH && sy<=sectionFourY+720){
                 if(!ZY.config.deviceCode.iOS){
                     sectionFourBG.addClass("zy_bg_fixed");
 
                     //滚动的时候使用clip
-                    rect="rect(0px "+winW+"px "+(800-(sy-sectionFourY)+100)+"px 0px)";
+                    rect="rect(0px "+winW+"px "+(720-(sy-sectionFourY)+100)+"px 0px)";
                     sectionFourBG.css("clip",rect);
                 }
 
