@@ -338,11 +338,11 @@ ZY.controllerManager=(function(){
             $("#zy_nav ul li a").removeClass("active");
             if(sy<=sectionOneY){
 
-            }else if(sy<=sectionTwoY){
+            }else if(sy<=sectionTwoY-150){
                 $("#zy_nav ul li:nth-child(1) a").addClass("active");
-            }else if(sy<=sectionThreeY){
+            }else if(sy<=sectionThreeY-150){
                 $("#zy_nav ul li:nth-child(2) a").addClass("active");
-            }else if(sy<=sectionFourY){
+            }else if(sy<=sectionFourY-150){
                 $("#zy_nav ul li:nth-child(3) a").addClass("active");
             }else if(sy<=footerY){
                 $("#zy_nav ul li:nth-child(4) a").addClass("active");
@@ -361,15 +361,7 @@ ZY.controllerManager=(function(){
              *注意：背景图的高度是根据宽度变化的，可能会大于720，最大为一屏幕高，
              *720-（sy-sectionOney)+100 可能大于一屏幕高，并不影响显示，因为当clip的显示高度大于实际高度时，只会显示成实际高度
              */
-            if(sy>sectionOneY-winH && sy<=sectionOneY+720){
-                if(!ZY.config.deviceCode.iOS){
-                    sectionOneBG.addClass("zy_bg_fixed");
-
-                    //滚动的时候使用clip
-                    rect="rect(0px "+winW+"px "+(720-(sy-sectionOneY)+100)+"px 0px)";
-                    sectionOneBG.css("clip",rect);
-                }
-
+            if(sy>sectionOneY-winH && sy<sectionTwoY){
                 if(!ZY.dataManager.sectionOneLoaded){
 
                     //获取第1个分类(风景）文章
@@ -382,21 +374,9 @@ ZY.controllerManager=(function(){
                     });
                     ZY.dataManager.sectionOneLoaded=true;
                 }
-            }else{
-                if(!ZY.config.deviceCode.iOS){
-                    sectionOneBG.removeClass("zy_bg_fixed");
-                    sectionOneBG.css("clip","");
-                }
             }
 
-            if(sy>sectionTwoY-winH && sy<=sectionTwoY+720){
-                if(!ZY.config.deviceCode.iOS){
-                    sectionTwoBG.addClass("zy_bg_fixed");
-
-                    //滚动的时候使用clip
-                    rect="rect(0px "+winW+"px "+(720-(sy-sectionTwoY)+100)+"px 0px)";
-                    sectionTwoBG.css("clip",rect);
-                }
+            if(sy>sectionTwoY-winH && sy<sectionThreeY){
 
                 if(!ZY.dataManager.sectionTwoLoaded){
 
@@ -410,21 +390,10 @@ ZY.controllerManager=(function(){
                     });
                     ZY.dataManager.sectionTwoLoaded=true;
                 }
-            }else{
-                if(!ZY.config.deviceCode.iOS){
-                    sectionTwoBG.removeClass("zy_bg_fixed");
-                    sectionTwoBG.css("clip","");
-                }
             }
 
-            if(sy>sectionThreeY-winH && sy<=sectionThreeY+720){
-                if(!ZY.config.deviceCode.iOS){
-                    sectionThreeBG.addClass("zy_bg_fixed");
+            if(sy>sectionThreeY-winH && sy<sectionFourY){
 
-                    //向下滚动的时候使用clip
-                    rect="rect(0px "+winW+"px "+(720-(sy-sectionThreeY)+100)+"px 0px)";
-                    sectionThreeBG.css("clip",rect);
-                }
                 if(!ZY.dataManager.sectionThreeLoaded){
 
                     //获取第3个分类(物语）文章
@@ -438,22 +407,9 @@ ZY.controllerManager=(function(){
 
                     ZY.dataManager.sectionThreeLoaded=true;
                 }
-            }else{
-
-                if(!ZY.config.deviceCode.iOS){
-                    sectionThreeBG.removeClass("zy_bg_fixed");
-                    sectionThreeBG.css("clip","");
-                }
-
             }
-            if(sy>sectionFourY-winH && sy<=sectionFourY+720){
-                if(!ZY.config.deviceCode.iOS){
-                    sectionFourBG.addClass("zy_bg_fixed");
 
-                    //滚动的时候使用clip
-                    rect="rect(0px "+winW+"px "+(720-(sy-sectionFourY)+100)+"px 0px)";
-                    sectionFourBG.css("clip",rect);
-                }
+            if(sy>sectionFourY-winH && sy<footerY){
 
                 if(!ZY.dataManager.sectionFourLoaded){
                 	
@@ -466,11 +422,6 @@ ZY.controllerManager=(function(){
                         targetContain:$("#zy_section_four_contain")
                     });
                     ZY.dataManager.sectionFourLoaded=true;
-                }
-            }else{
-                if(!ZY.config.deviceCode.iOS){
-                    sectionFourBG.removeClass("zy_bg_fixed");
-                    sectionFourBG.css("clip","");
                 }
             }
         },

@@ -35,14 +35,13 @@ ZY.uiManager=(function(){
         scrollToTarget:function(target){
             var top=target.offset().top;
 
-            if(!$("#zy_nav").hasClass("zy_nav_active")){
+            //减掉浮动菜单高度
+            top=top-80;
+
+            //需要判断是否是从最上上面点击
+            if($(window).scrollTop()<$("#zy_section_one").offset().top){
                 top=top-80;
             }
-
-            if(target.is($("#zy_section_one"))){
-                top=top-100;
-            }
-            
             if(top!= undefined){
                 TweenLite.killTweensOf(window);
 

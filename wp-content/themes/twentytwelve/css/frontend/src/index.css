@@ -182,16 +182,13 @@ a {
     z-index: 10;
 }
 .zy_section .zy_section_description{
-    width: 1080px;
+    width: 740px;
     margin:0px auto 10px auto;
     padding-left:20px;
     padding-top:5px;
     color:#231815;
     font-size: 16px;
     line-height: 28px;
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3;
     white-space: normal;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -312,9 +309,6 @@ a {
     width:560px;
     padding-left: 0px;
     padding-top: 0px;
-    -webkit-column-count: 1;
-    -moz-column-count: 1;
-    column-count: 1;
     color:#6cd9ea;
 }
 
@@ -1006,12 +1000,12 @@ a {
     width: 300px;
     line-height: 1.5em;
 }
-
+/*
 .article-main-slide .article-abstract-slide::first-letter {
     display: inline-block;
     font-size: 32px;
     color: #2ca6e0;
-}
+}*/
 
 .allslides-slide {
     display: block;
@@ -1242,12 +1236,12 @@ a {
 /**
 *响应式
 */
-@media screen and (max-width: 1135px) {
+/*@media screen and (max-width: 1135px) {
     .zy_section .zy_section_description{
         width: 710px;
     }
 
-}
+}*/
 @media screen and (max-width: 840px) {
     .zy_nav ul{
         width: 100%;
