@@ -100,8 +100,8 @@ class zy_slide_save_class extends zy_articles_save_class
         $post_data["post_title"]=$_POST["zy_title"];
         $post_data["post_excerpt"]=$_POST["zy_memo"];
         $post_data["post_name"]=$_POST["zy_title"];
-        $post_data["post_date"]=current_time('mysql');
-        $post_data["post_date_gmt"]=date("Y-m-d H:i:s");
+        /*$post_data["post_date"]=current_time('mysql');
+        $post_data["post_date_gmt"]=date("Y-m-d H:i:s");*/
         $post_data["post_status"]="publish";
         $post_data["post_type"]="post";
         $post_data["post_mime_type"]="zyslide";
