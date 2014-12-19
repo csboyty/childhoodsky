@@ -8,8 +8,8 @@
 var ZY=ZY||{};
 
 ZY.config={
-    ajaxurl:"http://www.comdesignlab.com/childhoodsky/wp-admin/admin-ajax.php",
-    siteurl:"http://www.comdesignlab.com/childhoodsky",
+    ajaxurl:"http://www.childhoodsky.com/wp-admin/admin-ajax.php",
+    siteurl:"http://www.childhoodsky.com",
     categoryIds:{
         sectionOneId:1, //童年的天空
         sectionTwoId:2,  //艺术小作坊
