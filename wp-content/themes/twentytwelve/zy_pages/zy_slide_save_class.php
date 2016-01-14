@@ -70,6 +70,7 @@ class zy_slide_save_class extends zy_articles_save_class
             die("保存打包数据出错，请联系开发人员");
         }
 
+        add_post_meta($post_id,"author_name",$_POST["zy_author_name"],true);
         //设置锁定标志
         wp_set_post_lock( $post_id );
 
@@ -100,8 +101,6 @@ class zy_slide_save_class extends zy_articles_save_class
         $post_data["post_title"]=$_POST["zy_title"];
         $post_data["post_excerpt"]=$_POST["zy_memo"];
         $post_data["post_name"]=$_POST["zy_title"];
-        /*$post_data["post_date"]=current_time('mysql');
-        $post_data["post_date_gmt"]=date("Y-m-d H:i:s");*/
         $post_data["post_status"]="publish";
         $post_data["post_type"]="post";
         $post_data["post_mime_type"]="zyslide";
@@ -144,6 +143,8 @@ class zy_slide_save_class extends zy_articles_save_class
         if($wpdb->update($wpdb->prefix."pack_ids",array("pack_lock"=>0,"pack_time"=>NULL),array("post_id"=>$post_id),array("%d","%s"))===false){
             die("保存打包数据出错，请联系开发人员");
         }
+
+        update_post_meta($post_id,"author_name",$_POST["zy_author_name"]);
 
         //设置锁定标志
         wp_set_post_lock( $post_id );

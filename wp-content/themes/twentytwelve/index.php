@@ -54,63 +54,65 @@
 
 <div id="zy_main_wrapper" class="zy_main_wrapper">
 
-<!--置顶文章部分-->
-<section id="zy_top_post" class="zy_top_post">
-    <div id="zy_top_post_poster" class="zy_top_post_poster">
-        <img class="zy_theme_bg_content zy_theme_bg_default" src="
-        <?php echo get_template_directory_uri(); ?>/images/frontend/default_bg/fengmian_bg.jpg"/>
-    </div>
-</section>
-
-<!--菜单栏-->
-<nav id="zy_nav" class="zy_nav">
-    <ul>
-        <li><a href="#zy_section_one" class="menuItemOne">童年的天空</a></li>
-        <li><a href="#zy_section_two" class="menuItemTwo">艺术小作坊</a></li>
-        <li><a href="#zy_section_three" class="menuItemThree">绘本赏析</a></li>
-        <li><a href="#zy_section_four" class="menuItemFour">蓬蓬头杂货铺</a></li>
-    </ul>
-</nav>
-
-<!--------------------------------------童年的天空------------------------------------------>
-<section id="zy_section_one" class="zy_section_one zy_section">
-    <div class="zy_section_description">
-        童年的天空是一个致力于发展中国原创图画书的工作室，这支团队的主体成员是湖南大学设计艺术学院的师生，
-        “Art for tomorrow”是童年的天空团队的理想 。 什么样的艺术是孩子们需要的艺术？什么样的教育是好的教育？
-        童年的天空图画书工作室的每一本作品里，都有他们对这个问题的理解。
-    </div>
-    <h2 class="zy_subheading">特约专栏</h2>
-    <section id="zy_section_one_contain" class="zy_section_contain">
-        <a id="zy_section_one_prev" class="zy_page_prev zy_page_item zy_disable"></a>
-        <div id="zy_section_one_list_container" class="zy_post_list_container">
-            <script id="zy_section_one_articles_tpl" type="text/template">
-
-                {@each posts as post}
-                <li  class="zy_article_one" data-zy-post-id="${post.post_id}" data-zy-post-type="${post.post_mime_type}">
-                    <div class="zy_article_info">
-                        <img src="${post.thumb}">
-                        <h2>${post.post_title}</h2>
-                    </div>
-                    <div class="zy_article_abstract">
-                        <p>${post.post_excerpt}</p>
-                    </div>
-                </li>
-                {@/each}
-
-            </script>
-            <ul id="zy_section_one_list" class="zy_post_list">
-
-            </ul>
+    <!--置顶文章部分-->
+    <section id="zy_top_post" class="zy_top_post">
+        <div id="zy_top_post_poster" class="zy_top_post_poster">
+            <img class="zy_theme_bg_content zy_theme_bg_default" src="<?php echo get_template_directory_uri(); ?>/images/frontend/apps/top_bg1.png"/>
         </div>
-        <a id="zy_section_one_next" class="zy_page_next zy_page_item"></a>
-
+        <div style="min-width: 730px; text-align:center;"><img src="<?php echo get_template_directory_uri(); ?>/images/frontend/apps/top_bg2.png" style="margin:0px; padding:0px;" /></div>
     </section>
-</section>
 
-<!--------------------------------------艺术小作坊------------------------------------------>
-<section id="zy_section_two" class="zy_section_two zy_section">
+    <!--菜单栏-->
+    <nav id="zy_nav" class="zy_nav">
+        <ul>
+            <li><a href="#zy_section_one" class="menuItemOne">蓬蓬头书吧</a></li>
+            <li><a href="#zy_section_two" class="menuItemTwo">艺术小作坊</a></li>
+            <li><a href="#zy_section_three" class="menuItemThree">蓬蓬头杂货铺</a></li>
+            <li><a href="#zy_section_four" class="menuItemFour">童年的天空</a></li>
+        </ul>
+    </nav>
 
-    <!--<div id="zy_section_two_bg" class="zy_section_bg">
+    <!--------------------------------------童年的天空------------------------------------------>
+    <section id="zy_section_one" class="zy_section_one zy_section">
+        <!-- <div class="zy_section_description">
+             童年的天空是一个致力于发展中国原创图画书的工作室，这支团队的主体成员是湖南大学设计艺术学院的师生，
+             “Art for tomorrow”是童年的天空团队的理想 。 什么样的艺术是孩子们需要的艺术？什么样的教育是好的教育？
+             童年的天空图画书工作室的每一本作品里，都有他们对这个问题的理解。
+         </div>-->
+        <!--<h2 class="zy_subheading">特约专栏</h2>-->
+        <section id="zy_section_one_contain" class="zy_section_contain">
+            <a id="zy_section_one_prev" class="zy_page_prev zy_page_item zy_disable"></a>
+            <div id="zy_section_one_list_container" class="zy_post_list_container">
+
+                <script id="zy_section_one_articles_tpl" type="text/template">
+
+                    {@each posts as post,index}
+                    <li  class="zy_article_one zy_section_one_block" data-zy-post-id="${post.post_id}" data-zy-post-type="${post.post_mime_type}">
+                        {@if index==0 || index==1 || index==4 || index==5 }
+                        <div class="zy_section_one_block_left"><img src="${post.thumb}"></div>
+                        <div class="zy_section_one_block_right zy_section_one_block_right${index}">${post.post_title}<br/>${post.author_name}</div>
+                        {@else}
+                        <div class="zy_section_one_block_right zy_section_one_block_right${index}">${post.post_title}<br/>${post.author_name}</div>
+                        <div class="zy_section_one_block_left"><img src="${post.thumb}"></div>
+                        {@/if}
+                        <div class="clear"></div>
+
+                    </li>
+                    {@/each}
+
+
+                </script>
+                <ul id="zy_section_one_list" class="zy_post_list">
+                </ul>
+
+            </div>
+            <a id="zy_section_one_next" class="zy_page_next zy_page_item"></a>
+        </section>
+
+        <!--------------------------------------艺术小作坊------------------------------------------>
+        <section id="zy_section_two" class="zy_section_two zy_section">
+
+            <!--<div id="zy_section_two_bg" class="zy_section_bg">
         <div class="zy_section_top_bg">上边背景</div>
 
         <img class="zy_theme_bg_content zy_theme_bg_default" src="
@@ -120,43 +122,39 @@
     </div>
     <h2 class="zy_section_heading">艺术小作坊</h2>-->
 
-    <section id="zy_section_two_contain" class="zy_section_contain">
-        <div class="zy_section_description">
-            <p>
-                这个栏目是将我们有限的艺术创作、艺术教育经验做了初步的梳理，分享给广大的教育工作者和年轻的父母亲。
-                我们的艺术教育课堂有一部分基于大学教育实践，比如剪纸和陶艺，所展示的作品就是大孩子们童心大发时创作的部分作品；
-                另一部分来源于儿童美术教育实践。我们将陆续推出一些简易、趣味性强的艺术课堂，并不断加以完善，欢迎大家多提宝贵意见。
-            </p>
-        </div>
-        <a id="zy_section_two_prev" class="zy_page_prev zy_page_item zy_disable">上一页</a>
-        <div id="zy_section_two_list_container" class="zy_post_list_container">
-            <script id="zy_section_two_articles_tpl" type="text/template">
+            <section id="zy_section_two_contain" class="zy_section_contain">
+                <div class="zy_section_description">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/frontend/apps/ysxzf_top_bg.png" width="775" height="99"/>
+                </div>
+                <a id="zy_section_two_prev" class="zy_page_prev zy_page_item zy_disable">上一页</a>
+                <div id="zy_section_two_list_container" class="zy_post_list_container">
 
-                {@each posts as post}
-                <li data-zy-post-id="${post.post_id}" data-zy-post-type="${post.post_mime_type}" class="zy_article_two">
-                    <div class="zy_article_thumb"><img src="${post.thumb}"/></div>
-                    <div class="zy_article_abstract">
-                        <h2>${post.post_title}</h2>
-                       <!-- <p class="zy_article_date">${post.post_date}</p>-->
-                        <p>
-                            ${post.post_excerpt}
-                        </p>
-                    </div>
-                </li>
-                {@/each}
+                    <script id="zy_section_two_articles_tpl" type="text/template">
 
-            </script>
-            <ul id="zy_section_two_list" class="zy_post_list">
+                        {@each posts as post}
+                        <li data-zy-post-id="${post.post_id}" data-zy-post-type="${post.post_mime_type}" class="zy_article_two">
+                            <div class="zy_article_thumb"><img src="${post.thumb}"/></div>
+                            <div class="zy_article_abstract">
+                                <h2>${post.post_title}</h2>
+                                <!-- <p class="zy_article_date">${post.post_date}</p>-->
+                                <!-- <p>${post.post_excerpt}</p>-->
+                            </div>
+                        </li>
+                        {@/each}
 
-            </ul>
-        </div>
-        <a id="zy_section_two_next" class="zy_page_next zy_page_item">下一页</a>
-    </section>
-</section>
-<!--------------------------------------绘本赏析------------------------------------------>
-<section id="zy_section_three" class="zy_section_three zy_section">
+                    </script>
+                    <ul id="zy_section_two_list" class="zy_post_list">
 
-    <!--<div id="zy_section_three_bg" class="zy_section_bg">
+                    </ul>
+
+                </div>
+                <a id="zy_section_two_next" class="zy_page_next zy_page_item">下一页</a>
+            </section>
+        </section>
+        <!--------------------------------------绘本赏析------------------------------------------>
+        <section id="zy_section_three" class="zy_section_three zy_section">
+
+            <!--<div id="zy_section_three_bg" class="zy_section_bg">
         <div class="zy_section_top_bg">上边背景</div>
         <img class="zy_theme_bg_content zy_theme_bg_default" src="
         <?php /*echo get_template_directory_uri(); */?>/images/frontend/default_bg/bg3.jpg">
@@ -164,50 +162,43 @@
     </div>
     <h2 class="zy_section_heading">绘本赏析</h2>-->
 
-    <section id="zy_section_three_contain" class="zy_section_contain">
-        <div class="zy_section_description">
-            <p>
-                绘本赏析栏目征得作家、画家、出版社的同意，以插图版的形式转载图画书内容。文字内容及图片配合插图版需要重新改编。
-                我们目前所征集的图书，大多来自于童年的天空创作团队的艺术家们。他们有的是在儿童读物出版领域奉献一生的老前辈
-                ，有的是初出茅庐满怀热情的新锐。
-            </p>
-            <p>
-                本栏目主要面向家长、幼儿园老师，向大家推荐优秀的绘本读物。
-            </p>
-        </div>
-        <a id="zy_section_three_prev" class="zy_page_prev zy_page_item zy_disable">上一页</a>
-        <div id="zy_section_three_list_container" class="zy_post_list_container">
-            <script id="zy_section_three_articles_tpl" type="text/template">
+            <section id="zy_section_three_contain" class="zy_section_contain">
+                <div class="zy_section_description">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/frontend/apps/zhp_top_bg.png" width="775" height="99"/>
+                </div>
+                <a id="zy_section_three_prev" class="zy_page_prev zy_page_item zy_disable">上一页</a>
+                <div id="zy_section_three_list_container" class="zy_post_list_container">
+
+                    <script id="zy_section_three_articles_tpl" type="text/template">
 
 
-                {@each posts as post}
-                <li data-zy-post-id="${post.post_id}" data-zy-post-type="${post.post_mime_type}" class="zy_article_two">
-                    <div class="zy_article_thumb"><img src="${post.thumb}"/></div>
-                    <div class="zy_article_abstract">
-                        <h2>${post.post_title}</h2>
-                        <!-- <p class="zy_article_date">${post.post_date}</p>-->
-                        <p>
-                            ${post.post_excerpt}
-                        </p>
-                    </div>
-                </li>
+                        {@each posts as post}
+                        <li data-zy-post-id="${post.post_id}" data-zy-post-type="${post.post_mime_type}" class="zy_article_two">
+                            <div class="zy_article_thumb"><img src="${post.thumb}"/></div>
+                            <div class="zy_article_abstract">
+                                <h2>${post.post_title}</h2>
+                                <!-- <p class="zy_article_date">${post.post_date}</p>-->
+                                <!--<p>${post.post_excerpt}</p>-->
+                            </div>
+                        </li>
 
-                {@/each}
+                        {@/each}
 
 
-            </script>
-            <ul id="zy_section_three_list" class="zy_post_list">
+                    </script>
+                    <ul id="zy_section_three_list" class="zy_post_list zy_post_three_list">
 
-            </ul>
-        </div>
-        <a id="zy_section_three_next" class="zy_page_next zy_page_item">下一页</a>
-    </section>
-</section>
+                    </ul>
 
-<!--------------------------------------蓬蓬头杂货铺------------------------------------------>
-<section id="zy_section_four" class="zy_section_four zy_section">
+                </div>
+                <a id="zy_section_three_next" class="zy_page_next zy_page_item">下一页</a>
+            </section>
+        </section>
 
-    <!--<div id="zy_section_four_bg" class="zy_section_bg">
+        <!--------------------------------------蓬蓬头杂货铺------------------------------------------>
+        <section id="zy_section_four" class="zy_section_four zy_section">
+
+            <!--<div id="zy_section_four_bg" class="zy_section_bg">
         <div class="zy_section_top_bg"></div>
         <img class="zy_theme_bg_content zy_theme_bg_default" src="
         <?php /*echo get_template_directory_uri(); */?>/images/frontend/default_bg/bg4.jpg">
@@ -215,154 +206,55 @@
 	</div>
 	<h2 class="zy_section_heading">蓬蓬头杂货铺</h2>-->
 
-    <section id="zy_section_four_contain" class="zy_section_contain">
-        <div class="zy_section_description">
-            <p>
-                童年的天空网站上所有义卖的物品首先是为了支持本土图画书原创。
-                我们希望2015年开全免费的e绘本栏目。并开设经典文学赏析栏目，免费提供给所有的孩子阅读。
-            </p>
-            <p>
-                如果您喜欢我们的网站，信任我们的团队，请您支持蓬蓬头杂货铺的义卖。
-            </p>
-        </div>
-        <a id="zy_section_four_prev" class="zy_page_prev zy_page_item zy_disable">上一页</a>
-        <div id="zy_section_four_list_container" class="zy_post_list_container">
-            <script id="zy_section_four_articles_tpl" type="text/template">
+            <section id="zy_section_four_contain" class="zy_section_contain zy_section_contain4">
+                <div class="zy_section_description">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/frontend/apps/tndtk_top_bg.png" width="810" height="208"/>
+                </div>
+                <a id="zy_section_four_prev" class="zy_page_prev zy_page_item zy_disable">上一页</a>
+                <div id="zy_section_four_list_container" class="zy_post_list_container">
 
-                {@each posts as post}
-                <li data-zy-post-id="${post.post_id}" data-zy-post-type="${post.post_mime_type}" class="zy_article_two">
-                    <div class="zy_article_thumb"><img src="${post.thumb}"/></div>
-                    <div class="zy_article_abstract">
-                        <h2>${post.post_title}</h2>
-                        <!-- <p class="zy_article_date">${post.post_date}</p>-->
-                        <p>
-                            ${post.post_excerpt}
-                        </p>
-                    </div>
-                </li>
-                {@/each}
+                    <script id="zy_section_four_articles_tpl" type="text/template">
 
-            </script>
-            <ul id="zy_section_four_list" class="zy_post_list">
+                        {@each posts as post}
+                        <li data-zy-post-id="${post.post_id}" data-zy-post-type="${post.post_mime_type}" class="zy_article_two zy_article_two1">
+                            <div class="zy_article_thumb zy_article_thumb1"><img src="${post.thumb}"/></div>
+                            <div class="title_text">${post.post_title}</div>
+                            <!--<div class="zy_article_abstract">-->
+                            <!-- <h2>${post.post_title}</h2>-->
+                            <!-- <p class="zy_article_date">${post.post_date}</p>-->
+                            <!--<p>${post.post_excerpt}</p>-->
+                            <!--</div>-->
+                        </li>
+                        {@/each}
 
-            </ul>
-        </div>
-        <a id="zy_section_four_next" class="zy_page_next zy_page_item">下一页</a>
+                    </script>
+                    <ul id="zy_section_four_list" class="zy_post_list zy_post_three_list">
 
-    </section>
-</section>
+                    </ul>
 
-<!--底部-->
-<footer class="zy_footer">
-    <!--<div class="zy_project_top_bg"></div>-->
-    <div class="zy_project">
-        <div class="zy_project_info">
-            <h2 class="zy_project_title">童年天空的大朋友们</h2>
-            <div class="zy_project_column">
-                <ul class="cooperatorList">
-                    <h4 class="title">艺术家</h4>
-                    <li>徐&nbsp;&nbsp;&nbsp;冰&nbsp;&nbsp;&nbsp;中央美术学院院长</li>
-                    <li>吕胜中&nbsp;&nbsp;&nbsp;中央美术学院实验艺术学院院长</li>
-                    <li>蔡&nbsp;&nbsp;&nbsp;皋&nbsp;&nbsp;&nbsp;CCBY理事</li>
-                    <li>萧沛苍&nbsp;&nbsp;&nbsp;原湖南省美协副主席，湖南油画院院长</li>
-                    <li>颜新元&nbsp;&nbsp;&nbsp;北京航空航天大学新媒体学院教授</li>
-                    <!--<li>郏宝雄&nbsp;&nbsp;&nbsp;湖南美术出版社原副社长</li>-->
-                </ul>
-                <ul class="cooperatorList">
-                    <h4 class="title">教育家</h4>
-                    <li>伊少淳&nbsp;&nbsp;&nbsp;中国少年儿童艺术教育委员会主席</li>
-                    <li>朱训德 &nbsp;&nbsp;&nbsp;湖南省美术家协会主席</li>
-                    <li>谢丽芳&nbsp;&nbsp;&nbsp;中国少年儿童艺术教育委员会副主席</li>
-                    <li>何人可&nbsp;&nbsp;&nbsp;湖南大学设计艺术学院院长</li>
-                    <li>赵江洪&nbsp;&nbsp;&nbsp;湖南大学设计艺术学院教授</li>
-                    <li>萧狄虎&nbsp;&nbsp;&nbsp;湖南大学设计艺术学院教授</li>
-                    <li>季&nbsp;&nbsp;&nbsp;铁&nbsp;&nbsp;&nbsp;湖南大学设计艺术学院副院长</li>
-                    <li>袁&nbsp;&nbsp;&nbsp;翔&nbsp;&nbsp;&nbsp;南大学设计艺术学院教学主任</li>
-                    <!--<li>谭&nbsp;&nbsp;&nbsp;浩&nbsp;&nbsp;&nbsp;湖南大学设计艺术学院副教授</li>
-                    <li>谢&nbsp;&nbsp;&nbsp;军&nbsp;&nbsp;&nbsp;湖南大学设计艺术学院副教授</li>-->
-                </ul>
-                <ul class="cooperatorList">
-                    <h4 class="title">出版人</h4>
-                    <li>张天明&nbsp;&nbsp;&nbsp;湖南新闻出版集团总经理</li>
-                    <li>李小山&nbsp;&nbsp;&nbsp;湖南美术出版社社长</li>
-                    <li>黄&nbsp;&nbsp;&nbsp;啸&nbsp;&nbsp;&nbsp;湖南美术出版社副社长</li>
-                    <li>郏宝雄&nbsp;&nbsp;&nbsp;湖南美术出版社原副社长</li>
-                    <li>左汉中&nbsp;&nbsp;&nbsp;湖南美术出版社编审</li>
-                    <li>周敏纳&nbsp;&nbsp;&nbsp;湖南美术出版社原副社长</li>
-                    <li>李&nbsp;&nbsp;&nbsp;松&nbsp;&nbsp;&nbsp;圣之空间馆长</li>
-                    <li>黎&nbsp;&nbsp;&nbsp;丹&nbsp;&nbsp;&nbsp;湖南美术出版社编辑</li>
-                    <li>萧睿子&nbsp;&nbsp;&nbsp;湖南教育出版社主任编辑</li>
-                    <!--<li>袁&nbsp;&nbsp;&nbsp;江&nbsp;&nbsp;&nbsp;编辑室主任</li>-->
-                    <li>谭菁菁&nbsp;&nbsp;&nbsp;湖南少年儿童出版社</li>
-                    <li>陈荣义&nbsp;&nbsp;&nbsp;湖南省美伦美术馆馆长</li>
-                </ul>
-                <ul class="cooperatorList">
-                    <h4 class="title">支持单位</h4>
-                    <li>中国美术家协会少儿艺委会</li>
-                    <li>湖南大学设计艺术学院</li>
-                    <li>湖南设计家协会</li>
-                    <li>湖南美术出版社</li>
-                </ul>
+                </div>
+                <a id="zy_section_four_next" class="zy_page_next zy_page_item">下一页</a>
+
+            </section>
+        </section>
+
+        <!--底部-->
+        <footer class="zy_footer">
+            <!--<div class="zy_project_top_bg"></div>-->
+            <div class="zy_project">
+                <div class="zy_project_info">
+                    <p class="p_1">童年的天空编辑部<br/>湖南省长沙市湖南大学设计艺术学院530室  邮编 410082  邮箱：childhoodsky@qq.com</p>
+                    <p class="p_2">Childhoodsky Studio,Lushannan  Road Changsha,Hunan P.R China</p>
+                    <p class="p_2">Copyright &copy; 2015 Childhoodsky Studio, all rights reserved.</p>
+                </div>
             </div>
-
-            <div class="zy_project_column">
-                <ul class="cooperatorList">
-                    <h4 class="title">顾问</h4>
-                    <li>野津珖子&nbsp;&nbsp;&nbsp;日籍退休教师，童年的天空荣誉顾问</li>
-                    <li>南岛顺子&nbsp;&nbsp;&nbsp;日籍退休编辑，童年的天空荣誉顾问</li>
-                </ul>
-
-                <ul class="cooperatorList">
-                    <h4 class="title">作家</h4>
-                    <li>曹文轩&nbsp;&nbsp;&nbsp;北京大学教授，当代著名作家</li>
-                    <li>梅子涵&nbsp;&nbsp;&nbsp;上海师范大学教授</li>
-                    <li>彭&nbsp;&nbsp;&nbsp;懿&nbsp;&nbsp;&nbsp;上海少年儿童出版社编辑  </li>
-                    <li>骆小戈&nbsp;&nbsp;&nbsp;中国妇女研究学会理事</li>
-                    <li>薛忆沩&nbsp;&nbsp;&nbsp;曾为《南方周末》及《随笔》杂志撰写读书专栏</li>
-                    <li>陈约红&nbsp;&nbsp;&nbsp;《滇池》文学月刊总编室主任，副编审</li>
-                </ul>
-
-                <ul class="cooperatorList">
-                    <h4 class="title">青年艺术家、作家</h4>
-                    <li>杨&nbsp;&nbsp;&nbsp;忠&nbsp;&nbsp;&nbsp;中央美术学院城市设计艺术学院副教授</li>
-                    <li>庄&nbsp;&nbsp;&nbsp;庄&nbsp;&nbsp;&nbsp;北京航空航天学院</li>
-                    <li>萧翱子&nbsp;&nbsp;&nbsp;湖南大学设计艺术学院教师</li>
-                    <li>弯&nbsp;&nbsp;&nbsp;弯&nbsp;&nbsp;&nbsp;职业艺术家</li>
-                    <li>张&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;作家，南京信谊编辑</li>
-                    <li>孙亚楠&nbsp;&nbsp;&nbsp;童年的天空工作室助理编辑</li>
-                    <li>王&nbsp;&nbsp;&nbsp;擎&nbsp;&nbsp;&nbsp;童年的天空工作室助理设计师</li>
-                    <li>杨丽村&nbsp;&nbsp;&nbsp;艺术家／设计师</li>
-                    <li>王天天&nbsp;&nbsp;&nbsp;艺术家／设计师</li>
-                    <li>周绪敏&nbsp;&nbsp;&nbsp;艺术家／教师</li>
-                    <li>刘&nbsp;&nbsp;&nbsp;天&nbsp;&nbsp;&nbsp;艺术家／设计师</li>
-                    <li>王&nbsp;&nbsp;&nbsp;林&nbsp;&nbsp;&nbsp;艺术家／设计师</li>
-                    <li>姚&nbsp;&nbsp;&nbsp;瑶&nbsp;&nbsp;&nbsp;艺术家／设计师</li>
-                    <li>方&nbsp;&nbsp;&nbsp;堃&nbsp;&nbsp;&nbsp;艺术家／设计师</li>
-                    <li>郑吴越&nbsp;&nbsp;&nbsp;艺术家／教师</li>
-                    <li>张源源&nbsp;&nbsp;&nbsp;艺术家／设计师</li>
-                    <li>杨&nbsp;&nbsp;&nbsp;昊&nbsp;&nbsp;&nbsp;艺术家／设计师</li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="zy_copyright">
-        <div class="zy_copyright_column">
-            <p>童年的天空编辑部</p>
-            <p>湖南省长沙市湖南大学艺术学院503室</p>
-            <p>邮编&nbsp;&nbsp;410082</p>
-            <p>childhoodsky@qq.com</p>
-        </div>
-        <div class="zy_copyright_column">
-            <p>有奖征稿</p>
-            <p>故事：绘图、摄影照片+文字</p>
-            <p>艺术课堂：图片+文字说明</p>
-            <p>e绘本投稿：文章word文档、画稿、pdf</p>
-        </div>
-    </div>
-</footer>
+        </footer>
 </div>
+<section id="zy_top_post" class="zy_top_post">
+    <div id="zy_top_post_poster" class="zy_top_post_poster">
+        <img class="zy_theme_bg_content zy_theme_bg_default" src="<?php echo get_template_directory_uri(); ?>/images/frontend/apps/bottom_bg1.png"/>
+    </div>
+</section>
 
 <!--弹出层-->
 <section id="zy_loading_container" class="zy_loading_container zy_hidden"></section>
@@ -384,6 +276,7 @@
 <article id="zy_article_container" class="zy_article_container">
     <span id="zy_article_container_close" class="zy_article_container_close"></span>
     <section id="zy_article_content" class="zy_article_content">
+
         <script id="zy_show_detail_tpl" type="text/template">
             {@if post_type=="zypost"}
             <article class="article-main-post">
@@ -394,8 +287,11 @@
                     <h2 class="article-time-post article-item-post">${post_date}</h2>
                 </div>-->
                 <div class="article-poster-post">
-                    <img src="${post_thumb}" >
+                    <div class="content_bg"><img src="${post_thumb}" ></div>
                     <h1 class="article-title-post">${post_title}</h1>
+                    <p>${post_title}</p>
+                    <p>${post_category} | ${post_date}</p>
+                    <p>${post_author}</p>
                 </div>
 
 

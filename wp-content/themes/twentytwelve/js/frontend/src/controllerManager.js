@@ -35,7 +35,9 @@ ZY.controllerManager=(function(){
         if(categoryId==ZY.config.categoryIds.sectionOneId){
             if(limit>4){
                 limit=4;
-            }
+            }else{
+				limit=2;
+				}
         }else{
             if(limit>3){
                 limit=3;

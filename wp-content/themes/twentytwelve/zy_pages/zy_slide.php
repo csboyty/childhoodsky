@@ -142,7 +142,18 @@ echo "<input type='hidden' id='post_ID' name='zy_slide_id' value='$post_id'>";
 
             <label class="zy_label">幻灯片主题</label>
 
-            <input required id="zy_title" maxlength="150" value="<?php echo get_the_title($post_id) ?>" class="zy_item" type="text" name="zy_title"/>
+            <input required id="zy_title" maxlength="150" value="<?php echo get_the_title($post_id) ?>"
+                   class="zy_item" type="text" name="zy_title"/>
+
+
+
+        </section>
+        <section>
+
+            <label class="zy_label">作者</label>
+
+            <input required id="zy_title" maxlength="150" value="<?php echo get_post_meta($post_id,"author_name",true); ?>"
+                   class="zy_item" type="text" name="zy_author_name"/>
 
 
 

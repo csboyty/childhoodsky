@@ -11,16 +11,16 @@ ZY.config={
     ajaxurl:"http://www.childhoodsky.com/wp-admin/admin-ajax.php",
     siteurl:"http://www.childhoodsky.com",
     categoryIds:{
-        sectionOneId:1, //童年的天空
+        sectionOneId:3, //绘本欣赏
         sectionTwoId:2,  //艺术小作坊
-        sectionThreeId:3, //绘本欣赏
-        sectionFourId:5 //蓬蓬头杂货铺
+        sectionThreeId:5, //蓬蓬头杂货铺
+        sectionFourId:1 //童年的天空
     },
     articleWidths:{
-        sectionOneWidth:280,//每个分类的li的宽度
-        sectionTwoWidth:370,
-        sectionThreeWidth:370,
-        sectionFourWidth:370
+        sectionOneWidth:370,//每个分类的li的宽度
+        sectionTwoWidth:254,
+        sectionThreeWidth:254,
+        sectionFourWidth:254
     },
     errorCode:{
         connectionError:"无法连接到服务器。", //错误提示信息

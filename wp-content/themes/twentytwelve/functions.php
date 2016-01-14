@@ -610,11 +610,14 @@ function insert_own_table(){
     if($wpdb->get_var("show tables like '$view_posts'")!=$view_posts){
 
         //在ajax_class中使用到
-        $sql="create view $view_posts as SELECT p.ID AS post_id,p.post_title,p.post_excerpt,p.post_date,
-            p.post_mime_type,m.meta_value AS thumb,u.display_name,c.term_id FROM $wpdb->posts AS p,
-            $wpdb->users AS u,$wpdb->term_relationships AS s,$wpdb->postmeta AS m,$wpdb->term_taxonomy AS t,
-            $wpdb->terms AS c WHERE  t.term_id=c.term_id AND s.term_taxonomy_id=t.term_taxonomy_id AND s.object_id=p.ID
-            AND p.post_author=u.ID AND p.post_status='publish' AND m.post_id=p.ID AND m.meta_key='zy_thumb' ORDER BY p.post_date DESC;";
+        $sql="CREATE VIEW $view_posts AS SELECT p.ID AS post_id,p.post_title,p.post_excerpt,p.post_date,
+            p.post_mime_type,m1.meta_value AS thumb,m2.meta_value AS author_name,c.term_id FROM $wpdb->posts AS p
+            INNER JOIN $wpdb->term_relationships AS s ON s.object_id=p.ID
+            INNER JOIN $wpdb->postmeta AS m1 ON m1.post_id=p.ID AND m1.meta_key='zy_thumb'
+            INNER JOIN $wpdb->postmeta AS m2 ON m2.post_id=p.ID AND m2.meta_key='author_name'
+            INNER JOIN $wpdb->term_taxonomy AS t ON s.term_taxonomy_id=t.term_taxonomy_id
+            INNER JOIN $wpdb->terms AS c ON t.term_id=c.term_id
+            WHERE p.post_status='publish';;";
 
         //print_r($sql);
 
